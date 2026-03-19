@@ -42,16 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Floating particles ---
   const particlesContainer = document.getElementById('heroParticles');
   if (particlesContainer) {
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 300; i++) {
       const particle = document.createElement('div');
       particle.className = 'hero-particle';
-      const size = Math.random() * 4 + 2;
+      const size = Math.random() * 7 + 1;
       particle.style.width = size + 'px';
       particle.style.height = size + 'px';
       particle.style.left = Math.random() * 100 + '%';
-      particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
-      particle.style.animationDelay = (Math.random() * 15) + 's';
-      particle.style.opacity = Math.random() * 0.5 + 0.1;
+      particle.style.animationDuration = (Math.random() * 14 + 6) + 's';
+      particle.style.animationDelay = (Math.random() * 8) + 's';
+      particle.style.opacity = Math.random() * 0.7 + 0.15;
       particlesContainer.appendChild(particle);
     }
   }
