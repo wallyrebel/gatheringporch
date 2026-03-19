@@ -1390,7 +1390,7 @@ img {
     justify-content: center;
     align-items: center;
     gap: 24px;
-    z-index: 999;
+    z-index: 1001;
   }
 
   .nav-menu.active {
@@ -1404,7 +1404,12 @@ img {
 
   .nav-toggle {
     display: flex;
-    z-index: 1001;
+    z-index: 1002;
+  }
+
+  /* When menu is open, force hamburger lines to white so X is visible on navy overlay */
+  .nav-toggle.active span {
+    background: var(--white) !important;
   }
 
   .nav-toggle.active span:nth-child(1) {
@@ -1417,6 +1422,13 @@ img {
 
   .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* When menu is open, hide the navbar background so it doesn't cover the overlay */
+  .navbar.menu-open {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
   }
 
   .hero-gathering {
