@@ -193,6 +193,68 @@
       text-decoration: none;
     }
 
+    /* Custom notice */
+    .custom-notice {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 24px 0;
+    }
+
+    .custom-notice-inner {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      box-shadow: 0 2px 12px rgba(27, 58, 92, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .custom-notice-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .custom-notice-text p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .custom-notice a.btn {
+      display: inline-block;
+      padding: 10px 28px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 50px;
+      background: var(--gold);
+      color: var(--white);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(201, 169, 110, 0.25);
+    }
+
+    .custom-notice a.btn:hover {
+      background: #A88B4A;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 600px) {
+      .custom-notice-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
     @media (max-width: 600px) {
       .menu-header h1 {
         font-size: 24px;
@@ -223,6 +285,16 @@
     <h1>Catering Menu</h1>
     <p>Custom Catering Menu &amp; Curated Client Favorites</p>
   </header>
+
+  <div class="custom-notice">
+    <div class="custom-notice-inner">
+      <div class="custom-notice-text">
+        <h3>Custom Menus Available</h3>
+        <p>Don't see exactly what you're looking for? We'll work with you to create a custom menu tailored to your event, theme, and guests.</p>
+      </div>
+      <a href="index.html#contact" class="btn">Contact Us</a>
+    </div>
+  </div>
 
   <main class="menu-container">
     <div>
