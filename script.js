@@ -112,27 +112,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Contact form handling ---
+  // --- Contact form handling (Web3Forms) ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       const btn = this.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
-      // Simulate form submission (replace with actual endpoint)
+      try {
+        const formData = new FormData(this);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          btn.textContent = 'Message Sent!';
+          btn.style.background = '#4CAF50';
+          this.reset();
+        } else {
+          btn.textContent = 'Error — Try Again';
+          btn.style.background = '#e74c3c';
+        }
+      } catch (error) {
+        btn.textContent = 'Error — Try Again';
+        btn.style.background = '#e74c3c';
+      }
+
       setTimeout(() => {
-        btn.textContent = 'Message Sent!';
-        btn.style.background = '#4CAF50';
-        this.reset();
-        setTimeout(() => {
-          btn.textContent = originalText;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 3000);
-      }, 1000);
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
     });
   }
 
