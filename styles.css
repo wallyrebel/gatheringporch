@@ -795,6 +795,13 @@ img {
   font-size: 14px;
 }
 
+.event-btn {
+  margin-top: 12px;
+  font-size: 11px;
+  padding: 8px 20px;
+  display: inline-block;
+}
+
 /* ===================== PARALLAX QUOTE ===================== */
 .parallax-quote {
   position: relative;
