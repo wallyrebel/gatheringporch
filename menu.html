@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering Menu — The Gathering Porch | Ripley, MS</title>
+  <meta name="description" content="Custom catering menu from The Gathering Porch in Ripley, MS. Entrées, sides, salads, pasta, appetizers, desserts & specialty bars for your event.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1B3A5C;
+      --navy-dark: #0F2640;
+      --gold: #C9A96E;
+      --gold-light: #D4BB8A;
+      --cream: #FAF8F5;
+      --white: #FFFFFF;
+      --text-muted: #6B7280;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .menu-header {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .menu-header a {
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .logo-the {
+      font-family: 'Great Vibes', cursive;
+      font-size: 16px;
+      color: var(--gold-light);
+      align-self: center;
+    }
+
+    .logo-main {
+      font-family: 'Great Vibes', cursive;
+      font-size: 40px;
+      color: var(--white);
+    }
+
+    .logo-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .menu-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--white);
+      margin-top: 8px;
+    }
+
+    .menu-header p {
+      color: var(--gold-light);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* Back link */
+    .back-link {
+      position: absolute;
+      top: 20px;
+      left: 24px;
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--white);
+    }
+
+    .menu-header {
+      position: relative;
+    }
+
+    /* Menu pages */
+    .menu-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .menu-page {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(27, 58, 92, 0.1);
+      overflow: hidden;
+    }
+
+    .menu-page img {
+      width: 100%;
+      display: block;
+    }
+
+    .page-label {
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    /* CTA */
+    .menu-cta {
+      text-align: center;
+      padding: 0 24px 60px;
+    }
+
+    .menu-cta p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .menu-cta a {
+      display: inline-block;
+      padding: 14px 36px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 50px;
+      background: var(--gold);
+      color: var(--white);
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .menu-cta a:hover {
+      background: #A88B4A;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201, 169, 110, 0.4);
+    }
+
+    /* Footer */
+    .menu-footer {
+      background: var(--navy-dark);
+      padding: 24px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+    }
+
+    .menu-footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .menu-header h1 {
+        font-size: 24px;
+      }
+
+      .back-link {
+        position: static;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="menu-header">
+    <a href="index.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Site
+    </a>
+    <a href="index.html">
+      <div class="logo">
+        <span class="logo-the">the</span>
+        <span class="logo-main">Gathering</span>
+        <span class="logo-sub">PORCH</span>
+      </div>
+    </a>
+    <h1>Catering Menu</h1>
+    <p>Custom Catering Menu &amp; Curated Client Favorites</p>
+  </header>
+
+  <main class="menu-container">
+    <div>
+      <p class="page-label">Entrées, Sides &amp; Specialty Bars</p>
+      <div class="menu-page">
+        <img src="menu-page1.jpg" alt="The Gathering Porch Catering Menu — Entrée Selection, Signature Sides, Fresh Salads, Pasta, and Specialty Bars" loading="lazy">
+      </div>
+    </div>
+    <div>
+      <p class="page-label">Appetizers &amp; Social Selections</p>
+      <div class="menu-page">
+        <img src="menu-page2.jpg" alt="The Gathering Porch Catering Menu — Grazing Displays, Light Bites, Warm Dips, Hot Appetizers, Salads, and Desserts" loading="lazy">
+      </div>
+    </div>
+  </main>
+
+  <div class="menu-cta">
+    <p>Ready to plan your perfect menu?</p>
+    <a href="index.html#contact">Contact Us</a>
+  </div>
+
+  <footer class="menu-footer">
+    <p>&copy; 2025–2026 The Gathering Porch. <a href="index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
